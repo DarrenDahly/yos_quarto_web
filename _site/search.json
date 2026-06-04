@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "yos_quarto_web",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "yos_quarto_web",
+    "section": "",
+    "text": "https://github.com/DarrenDahly/yos_quarto_web https://stackoverflow.com/questions/39435240/rstudio-changing-origin-for-git-version-control-of-project git remote add origin https://github.com/DarrenDahly/yos_quarto_web\ngit branch - M main\ngit push -u origin main\nhttps://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html https://psiweb.org/docs/default-source/sig—aims/a-guide-to-using-git-and-github-through-r-studio-201910.pdf?sfvrsn=c5a7db_0"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]
