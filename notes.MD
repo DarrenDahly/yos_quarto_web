@@ -1,3 +1,19 @@
+# Deploying to the web
+
+I have set up a Netlify account and registered the your-own-statistician.com domain.
+
+The website is created by clicking render, which builds all the files in the _site folder.
+
+All the code is on github https://github.com/DarrenDahly/yos_quarto_web
+
+When the _site folder is updated, commit and push the changes to github. 
+
+Netlify monitors the _site folder on github, and pushes it from there out to the web. 
+
+Change code -> Render site -> Push to github
+
+# Github set up
+
 https://github.com/DarrenDahly/yos_quarto_web https://stackoverflow.com/questions/39435240/rstudio-changing-origin-for-git-version-control-of-project git remote add origin <https://github.com/DarrenDahly/yos_quarto_web>
 
 git branch - M main
@@ -5,3 +21,9 @@ git branch - M main
 git push -u origin main
 
 https://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html https://psiweb.org/docs/default-source/sig---aims/a-guide-to-using-git-and-github-through-r-studio-201910.pdf?sfvrsn=c5a7db_0
+
+Netlify:
+
+<https://app.netlify.com/projects/delicate-yeot-fde6bf/deploys/6a216f55f56dfc04d0338e52>
+
+log in witi github darrendl1\@gmail.com
