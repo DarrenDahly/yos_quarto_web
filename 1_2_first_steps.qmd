@@ -1,0 +1,111 @@
+---
+title: "First steps"
+---
+
+In this session we will introduce the most fundamental aspects of using R (data types, data structures, objects, assignment, functions, packages, and loading data) and at the end of the session you should feel more comfortable engaging with the many online resources that are out there to help people use R to analyse data. And if you are an experienced R user, feel free to skip this one, or come along and add your experiences to the discussion.
+
+# First steps
+
+Learning anything from scratch requires starting *somewhere*. So let's start here:
+
+```{r}
+
+  x <- c(1, 2, 3)
+  x
+```
+
+Working from right to left, there are three key elements in the code above.
+
+The first is the **function** `c()`. A function in R is like a function in math. It is something that takes one or more inputs and converts them into an output. In this example, the function `c()` creates a **vector** containing the three numbers `1, 2, 3`.
+
+The next element is the **assignment operator** `<-`, and the third is `x`, which is an **object** we've now created, using `<-` , that contains the results of the function `c(1, 2, 3)`.
+
+At it's most basic, R scripting is just repeating this process, using the right functions on the relevant inputs to create new, useful outputs.
+
+`output <- function(inputs)`
+
+It's really just that simple. The hard part is learning over time what functions you should use for which tasks.
+
+# Data types and data structures
+
+In the example above, we took three pieces of data, all of which were **numbers**, and grouped them together as a vector. A **numeric vector**, if you will.
+
+```{r}
+
+  class(x)
+```
+
+In this example, **numeric** refers to the **type** of data, while a vector is the most primitive **data structure** in R \[\^1\]. It is essentially a list of *n* elements [that are all of the same type]{.underline}.
+
+Of course data comes in forms other than numbers. For example, maybe we are working with **characters** (or stings, or text).
+
+```{r}
+
+  y <- c("Kareem", "MJ", "Lebron")
+  class(y)
+```
+
+Critically, if we try to combine different data types in the same vector, R will convert all the elements as needed to the type with the lowest information value.
+
+```{r}
+
+  z <- c(x, y) # Combine the x and y vectors into a single vector, z
+  z
+  class(z)
+
+```
+
+In the example above, combining numbers and characters into the vector turned everything into character data, hence the `""` now surrounding the numbers.
+
+# Data frames
+
+While vectors are incredibly exciting, they can only take us so far. Ultimately we want to work with datasets, and as we all know, datasets are two-dimentional matrices that contain variables (or fields) in the columns that characterize the observations in the rows.
+
+R has `matrix` (two dimensions) and `array` (more than two dimensions) data structures, but like vectors, they can only contain a single type of data, and that's not going to get us very far towards the types of datasets we use in medicine and health research.
+
+```{r}
+
+  a_matrix_woah <- matrix(1:10, nrow = 2)
+  a_matrix_woah
+  class(a_matrix_woah)
+  dim(a_matrix_woah) # Dimensions (n rows, n columns)
+```
+
+R also has a **list** data structure, which is basically a 1D vector but that *can* contain different types of data.
+
+```{r}
+
+  a_list <- list(1, 2, "Kareem", "MJ")
+  class(a_list)
+```
+
+Lists in R can actually contain just about anything, including entire vectors and other objects, making them very useful.
+
+```{r}
+
+# A list of other objects we've created
+  big_list <- list(1:14, x, y, z, a_matrix_woah) 
+  big_list
+
+```
+
+And this brings us to the most important data structure in R, the **data.frame**.
+
+On a technical level, a data.frame in R is a list containing vectors. While each vector can only contain one type of data (because they are vectors), a data.frame can contain vectors of different types (because it's a list). Importanty, the vectors in a data.frame much all have the same number of elements (or **lengths**), and all the vectors must have a **name**.
+
+```{r}
+
+# Our first data.frame can you feel the excitement?
+
+  data <- data.frame(rank = x, player = y)
+  data
+
+```
+
+```{r}
+
+  class(data)
+  names(data)
+```
+
+\[\^1\]: For those coming from other programming languages, there are technically no scalars in R, just vectors of length 1. But I'm not a programmer and have no idea why anyone would care about this, so will leave it at that :)

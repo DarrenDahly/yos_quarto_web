@@ -1,0 +1,25 @@
+---
+title: "Helpful links"
+---
+
+One of the great things about using R is the global community of R users and developers who collectively design and share a wealth of learning materials freely online. I've listed some of my favorites below.
+
+# Getting started with R
+
+**RYouWithMe** is a great starter tutorial from RLadiesSydney and much better than anything I could put together. See more [here](https://rladiessydney.org/courses/)
+
+**Swirl** is an R package that you can install and then use to work your way through interactive tutorials. See more [here](https://swirlstats.com/).
+
+**Posit Recipes** are code snippets for doing all kinds of tasks with R. See more [here](https://posit.cloud/learn/recipes).
+
+Many **Cheatsheets** have been created to help with various tasks in R. See more [here](https://opensource.posit.co/resources/cheatsheets/).
+
+If you want an entire book style introduction, there are few better than [R for Data Science](https://r4ds.hadley.nz/).
+
+# Style guides
+
+As you develop R scripts, it helps to use a consistent **style** that will make them easier to read and easier to spot errors. It doesn't particularly matter what style you use, just as long as you are consistent. Here are some example style guides:
+
+[Google's R Style Guide](https://google.github.io/styleguide/Rguide.html)
+
+[Tidyverse Style Guide](https://style.tidyverse.org/)
