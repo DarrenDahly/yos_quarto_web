@@ -1,8 +1,12 @@
 ---
 title: "First steps"
+editor_options: 
+  chunk_output_type: inline
 ---
 
-In this session we will introduce the most fundamental aspects of using R (data types, data structures, objects, assignment, functions, packages, and loading data) and at the end of the session you should feel more comfortable engaging with the many online resources that are out there to help people use R to analyse data. And if you are an experienced R user, feel free to skip this one, or come along and add your experiences to the discussion.
+In this session we will introduce the most fundamental aspects of using R, and at the end of the session you should feel more comfortable engaging with the many online resources that are out there to help people use R to analyse data.
+
+You should come away from this tutorial with a general sense of meaning for the following terms: **data types** - **data structures** - **objects** - **functions** - **arguments** - **object classes** - **assignment** - **operators** - **dataframe** - **pipes** - **package** - **CRAN**
 
 # First steps
 
@@ -24,18 +28,39 @@ At it's most basic, R scripting is just repeating this process, using the right 
 
 `output <- function(inputs)`
 
-It's really just that simple. The hard part is learning over time what functions you should use for which tasks.
+It's really just that simple. The hardest part is learning over time what functions you should use for which tasks.
 
-# Data types and data structures
+## As aside on assignment
+
+Other programming languages use `=` as an assignment operator and technically you can use it in R as well, though people [have written many words about why you shouldn't](https://www.r-bloggers.com/2018/09/why-do-we-use-arrow-as-an-assignment-operator/).
+
+```{r}
+  
+  x = c(1, 2, 3)      
+  x
+```
+
+The assignment operator `<-` can also be used as `->` though you will only rarely see this in practice.
+
+```{r}
+
+  c(1, 2, 3) -> x      
+  x
+```
+
+# Data types, structures, and object classes
 
 In the example above, we took three pieces of data, all of which were **numbers**, and grouped them together as a vector. A **numeric vector**, if you will.
 
 ```{r}
 
   class(x)
+  typeof(x)
 ```
 
-In this example, **numeric** refers to the **type** of data, while a vector is the most primitive **data structure** in R \[\^1\]. It is essentially a list of *n* elements [that are all of the same type]{.underline}.
+In this example, **numeric** refers to the **class** of the object, while a vector is the most primitive **data structure** in R [^1]. It is essentially a list of *n* elements that are all of the same **type**, where type is a description of how the data are stored in memory (and "double" means [double-precision floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)). We don't want to get too deep in the weeds here and there is a close correspondence between **class** and **type**, but the important thing to understand more generally is that the class of an object can influence the behavior of functions we might use on said object. We will come back to this idea shortly.
+
+[^1]: For those coming from other programming languages, there are technically no scalars in R, just vectors of length 1. But I'm not a programmer and have no idea why anyone would care about this, so will leave it at that :)
 
 Of course data comes in forms other than numbers. For example, maybe we are working with **characters** (or stings, or text).
 
@@ -43,6 +68,29 @@ Of course data comes in forms other than numbers. For example, maybe we are work
 
   y <- c("Kareem", "MJ", "Lebron")
   class(y)
+  typeof(y)
+```
+
+And the other two important types of data are **logical** and **integer** values [^2].
+
+[^2]: There are also **complex** and **raw** types, but I've never used either and don't suspect you will need to either.
+
+```{r}
+
+  logicals <- c(TRUE, TRUE, FALSE)
+  class(logicals)
+  typeof(logicals)
+```
+
+To create a vector of integers, we have to explicitly tell R we want integers, and not decimal numbers.
+
+```{r}
+
+  integers <- c(as.integer(1), as.integer(2), as.integer(3)) 
+  integers <- as.integer(c(1, 2, 3))       
+  # The two lines above are equivalent
+  class(integers)
+  typeof(integers)
 ```
 
 Critically, if we try to combine different data types in the same vector, R will convert all the elements as needed to the type with the lowest information value.
@@ -52,14 +100,22 @@ Critically, if we try to combine different data types in the same vector, R will
   z <- c(x, y) # Combine the x and y vectors into a single vector, z
   z
   class(z)
-
+  typeof(z)
 ```
 
-In the example above, combining numbers and characters into the vector turned everything into character data, hence the `""` now surrounding the numbers.
+In the example above, combining numbers and characters into the vector turned everything into character data, hence the `""` now surrounding the numbers. Similarly, if we combine integers and decimal numbers in a vector, R will force them all to be stored as numbers.
+
+```{r}
+
+  mix <- c(integers, x)
+  mix
+  class(x)
+  typeof(x)
+```
 
 # Data frames
 
-While vectors are incredibly exciting, they can only take us so far. Ultimately we want to work with datasets, and as we all know, datasets are two-dimentional matrices that contain variables (or fields) in the columns that characterize the observations in the rows.
+While vectors are incredibly exciting, they can only take us so far. Ultimately we want to work with datasets, and as we all know, datasets are two-dimensional matrices that contain variables (or fields) in the columns that characterize the observations in the rows.
 
 R has `matrix` (two dimensions) and `array` (more than two dimensions) data structures, but like vectors, they can only contain a single type of data, and that's not going to get us very far towards the types of datasets we use in medicine and health research.
 
@@ -86,12 +142,11 @@ Lists in R can actually contain just about anything, including entire vectors an
 # A list of other objects we've created
   big_list <- list(1:14, x, y, z, a_matrix_woah) 
   big_list
-
 ```
 
 And this brings us to the most important data structure in R, the **data.frame**.
 
-On a technical level, a data.frame in R is a list containing vectors. While each vector can only contain one type of data (because they are vectors), a data.frame can contain vectors of different types (because it's a list). Importanty, the vectors in a data.frame much all have the same number of elements (or **lengths**), and all the vectors must have a **name**.
+On a technical level, a data.frame in R is a list containing vectors. While each vector can only contain one type of data (because they are vectors), a data.frame can contain vectors of different types (because it's a list). Importantly, the vectors in a data.frame much all have the same number of elements (or **lengths**), and all the vectors must have a **name**.
 
 ```{r}
 
@@ -99,13 +154,108 @@ On a technical level, a data.frame in R is a list containing vectors. While each
 
   data <- data.frame(rank = x, player = y)
   data
-
 ```
 
 ```{r}
 
   class(data)
   names(data)
+  dim(data)
 ```
 
-\[\^1\]: For those coming from other programming languages, there are technically no scalars in R, just vectors of length 1. But I'm not a programmer and have no idea why anyone would care about this, so will leave it at that :)
+# Selection
+
+In the examples above, we created a number of objects that we can think of as being made up of other, "smaller" objects. For example, the numeric vector `x <- c(1, 2, 3)` contains 3 numbers. We often want to extract bits of information from larger objects and the main way to do this is through selection using breakets `[ ]` . For example, if I want to the first element of a one dimensional vector, I can do this:
+
+```{r}
+
+  x <- c(1, 2, 3)
+  x
+  x[1]
+
+```
+
+For a two-dimensional object like our data.frame, I can do this:
+
+```{r}
+
+  data
+  data[1, 2] # Remember, it's always Row and then Column. RC
+
+```
+
+Lists are a little more complicated, in that they introduce the need for double brakets `[[ ]]` and lead us to
+
+```{r}
+
+  big_list[[2]] # Whatever is contained as the first element of the list
+  
+  big_list[2]
+```
+
+# Functions and packages
+
+The behavior of functions is partly controlled by its **arguments**. For example, consider the following two matrices.
+
+```{r}
+
+  matrix_1 <- matrix(c(1:10), nrow = 2)
+  matrix_1
+  
+  matrix_2 <- matrix(c(1:10), nrow = 5)
+  matrix_2
+
+```
+
+In that example, `nrow` is an argument of the function `matrix` that set the number of rows for the resulting matrix.
+
+The order of arguments in a function matters in that you don't technically need to name them as long as you use them in the right order. For example, the following will work just fine without the `nrow`.
+
+```{r}
+
+  matrix(c(1:10), 5) 
+
+```
+
+Or you can use the arguments out of order but only if you name them.
+
+```{r}
+
+  matrix(nrow = 5, data = c(1:10)) 
+
+```
+
+And many arguments have defaults. For example, the default for `matrix` is `nrow = 1`.
+
+```{r}
+  
+  matrix(data = c(1:10)) # Assumes you want nrow = 1
+  
+```
+
+So how can you possibly know all of this about a particular function? Thankfully R has a built in help function. To learn about a function you just type in `?function_name` and a window with information about that function will open.
+
+# Pipes
+
+You will regularly need for than one function to accomplish your goals. There are basically three ways you might code the use of multiple functions, one of which involves the **pipe** operator, `|>`.
+
+Let's say we want to take the mean of some set of numbers and then round the result to 1 decimal place. Here are three ways to code this:
+
+```{r}
+
+# Option 1   
+  x <- c(1, 43, 4019, 4)    
+  x <- mean(x)   
+  x <- round(x, 1)   
+  x    
+
+# Option 2: Nesting     
+  x <- round(mean(c(1, 43, 4019, 4)), 1)    
+  x    
+  
+# Option 3: Using pipes     
+  x <- c(1, 43, 4019, 4) |> mean() |> round(1)   
+  x 
+```
+
+As you can see, the basic function of the pipe `|>` is to take what's on the left and use it as the first argument in the function on the right. How you choose to write your code is entirely up to you. My own work tends to be a mix of all three options, though generally I try to avoid nesting because I find it more challenging to read and this to spot errors in.

@@ -4,46 +4,46 @@ title: ""
 
 Everything that follows is based on a simple set of premises.
 
--   Answers to important research questions in medicine and health often rely on quantitative data.
+- Answers to important research questions in medicine and health often rely on quantitative data.
 
--   Designing studies to generate useful quantitative data requires expertise. Ditto for analyzing the data and interpreting the results.
+- Designing studies to generate useful quantitative data requires expertise. So same goes for analyzing the data and interpreting the results.
 
--   Medical statisticians often have the expertise to contribute to the design, analysis and interpretation of quantitative data, but there are very few of them around.
+- Medical statisticians often have the expertise to contribute to the design, analysis and interpretation of quantitative data, but there are very few of them around.
 
--   This means that many or most researchers in working in medicine and health have to serve as their own statistician, whether they realize it or not.
+- This means that many or most researchers in working in medicine and health have to serve as their own statistician, whether they realize it or not.
 
--   Failure to take this responsibility seriously can lead to otherwise avoidable research waste, as flaws in study design, analysis and interpretation can render research results useless, or even harmful.
+- Failure to take this responsibility seriously can lead to otherwise avoidable research waste, as flaws in study design, analysis and interpretation can render research results useless, or even harmful.
 
--   *Primum non nocere*, or GTFO
+- *Primum non nocere*, or GTFO
 
 ------------------------------------------------------------------------
 
 Your-Own-Statistician is an informal, weekly, online meet-up aimed at supporting post-graduate students in the College of Medicine and Health at University College Cork to develop and maintain their quantitative data skills.
 
-Meet-ups will be on **Friday mornings at 10:30-11:30 via Teams** (and occasionally in person). You are welcome to attend as you are able. You do not need to RSVP and you do not need to let me know when you can't make it :)
+Meet-ups will be on **Friday mornings at 10:30-11:30 via Teams** (and occasionally in person). You are welcome to attend as you are able. You do not need to RSVP, and you do not need to let me know when you can't make it :)
 
 **General topics will include:**
 
--   Statistical and causal inference
+- Statistical and causal inference
 
--   Study design and data analysis planning
+- Study design and data analysis planning
 
--   Evaluation of clinical prediction models/algorithms
+- Evaluation of clinical prediction models/algorithms
 
--   Reproducible statistical programming with R and RStudio
+- Reproducible statistical programming with R and RStudio
 
--   Data visualisation
+- Data visualisation
 
--   Data management and stewardship
+- Data management and stewardship
 
 **The meet-up format will rotate through:**
 
--   Training seminars/tutorials
+- Training seminars/tutorials
 
--   Data analysis "show-and-tells"
+- Data analysis "show-and-tells"
 
--   Open Q&A and troubleshooting sessions
+- Open Q&A and troubleshooting sessions
 
--   Article discussions
+- Article discussions
 
 This website will be used to share materials.
