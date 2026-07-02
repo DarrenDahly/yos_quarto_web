@@ -16,6 +16,7 @@ Learning anything from scratch requires starting *somewhere*. So let's start her
 
 ```{r}
 
+# You can play along by typing this code into your own console
   x <- c(1, 2, 3)
   x
 ```
@@ -119,7 +120,7 @@ In the example above, combining numbers and characters into the vector turned ev
 
 I also want to introduce integer type data that are associated with character labels. We call these **factor** data and they are very useful -- so much so that we will come back to them in a separate tutorial later.
 
-```{r}
+```{r, error = TRUE}
 
   y
   class(y) # y starts as a character vector
@@ -139,9 +140,9 @@ I also want to introduce integer type data that are associated with character la
 
 ```
 
-And finally we have dates, which are numeric data that are presented in a date format. Again, working with dates will motivate it's own special treatment later.
+And finally we have dates, which are numeric data that are presented in a date format. Again, working with dates will recieve special treatment later.
 
-```{r}
+```{r, error = TRUE}
 
   dates <- c("2025-12-12", "2025-12-13")
   dates
@@ -152,8 +153,9 @@ And finally we have dates, which are numeric data that are presented in a date f
   typeof(dates) 
   class(dates)
   
-  # c(dates, y) # Tries to convert characters to date but can't
-  c(dates, x) # Does convert manage to convert numbers to dates...
+  c(dates, y) # Tries to convert characters to date but can't
+  
+  c(dates, x) # Does manage to convert numbers to dates...
   as.numeric(c(dates, x))
   
   # Because dates are the number of days before/since Jan 1, 1970
@@ -364,15 +366,15 @@ Let's say we want to take the mean of some set of numbers and then round the res
   x 
 ```
 
-As you can see, the basic function of the pipe `|>` is to take what's on the left and use it as the first argument in the function on the right. How you choose to write your code is entirely up to you. My own work tends to be a mix of all three options, though generally I try to avoid nesting because I find it more challenging to read and this to spot errors in.
+As you can see, the basic function of the pipe `|>` is to take what's on the left and use it as the first argument in the function on the right. How you choose to write your code is entirely up to you. My own work tends to be a mix of all three options, though generally I try to avoid nesting because I find it more challenging to read and thus to spot errors in.
 
 # Packages and CRAN
 
-As I've said, R is an open source programming language with a vibrant community of users and developers. This community, over many years, has collectively written many thousands of **packages**. The vast majority of those packages can be described as collections of functions, as well as perhaps example data.frames. So a big part of using R is to identify and then accesss the package(s) that contain the function(s) you need to conduct the analysis you want to conduct.
+R is an open source programming language with a vibrant community of users and developers. This community, over many years, has collectively written many thousands of **packages**. The vast majority of those packages can be described as collections of functions, as well as perhaps example data.frames. So a big part of using R is to identify and then accesss the package(s) that contain the function(s) you need to conduct the analysis you want to conduct.
 
 An important place to find useful R packages are the CRAN [Task Views](https://cran.r-project.org/web/views/). These are basically curated lists of packages organized by area.
 
-So where do you get packages? For now the answer is that you get them from CRAN and it's [repository of contributed packages](https://cran.r-project.org/web/packages/available_packages_by_date.html). Thankfully, access to CRAN is basically built into RStudio, so if you want to install a package, you use the `install.packages` function. In the next tutorial, we are going to introduce ggplot for data visualization, so let's install that package now by pasting this into your console: `install.packages("ggplot2")`.
+So where do you get packages? For now the answer is that you get them from CRAN and its [repository of contributed packages](https://cran.r-project.org/web/packages/available_packages_by_date.html). Thankfully, access to CRAN is basically built into RStudio, so if you want to install a package, you use the `install.packages` function. In the next tutorial, we are going to introduce ggplot for data visualization, so let's install that package now by pasting this into your console: `install.packages("ggplot2")`.
 
 When you want to actually load the package, you take it out of the "library".
 
@@ -381,7 +383,7 @@ When you want to actually load the package, you take it out of the "library".
   library(ggplot2)
 ```
 
-And now you have access to the package contents in your environment.
+And now you have access to the package contents in your environment, including the function `ggplot()`.
 
 ```{r}
 
@@ -409,4 +411,3 @@ Click the links below to review key terms as explained in [Hands-On Programming 
 [dataframes](https://rstudio-education.github.io/hopr/r-objects.html#data-frames)
 
 [packages](https://rstudio-education.github.io/hopr/packages2.html)
-

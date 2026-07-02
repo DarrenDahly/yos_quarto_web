@@ -2,13 +2,13 @@
 title: ""
 ---
 
-Everything that follows is based on a simple set of premises.
+Everything that follows is based on a simple set of premises:
 
 - Answers to important research questions in medicine and health often rely on quantitative data.
 
 - Designing studies to generate useful quantitative data requires expertise. The same goes for analyzing the data and interpreting the results.
 
-- Medical statisticians often have the expertise to contribute to the design, analysis and interpretation of quantitative data, but there are very few of them around.
+- Statisticians and epidemiologists often have the expertise to contribute to the design, analysis and interpretation of quantitative health research data, but there are very few of them around.
 
 - This means that many or most researchers working in medicine and health have to serve as their own statistician, whether they realize it or not.
 
@@ -46,4 +46,6 @@ Meet-ups will be on **Friday mornings at 10:30-11:30 via Teams** (and occasional
 
 - Article discussions
 
-This website will be used to share materials.
+This website will be used to share materials. It is obviously an ongoing work in progress.
+
+[Source code](https://github.com/DarrenDahly/yos_quarto_web/tree/main/_site)

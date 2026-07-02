@@ -6,7 +6,7 @@ R is a programming language designed to support the statistical analysis of data
 
 I started my own research career using Stata and still hold it in high esteem. Eventually though I ran across a method for analyzing data that was only possible with R, so I took the plunge. It was hard at first. New things always are. But I powered through and soon came to realize the power of R as an open-source programming language that pretty much allowed me to do anything I wanted with research data; and to do it more efficiently, with fewer errors.
 
-The challenges of using R have greatly diminished over time, largely due to a vast, dedicated community of R users and developers, and now I have no problems recommending it even for novice data analysts. Further, many now use R via a "integrated development environment" (a fancy term for interface) called RStudio, which makes using R even easier, as well as more powerful.
+The challenges of using R have greatly diminished over time, largely due to a vast, dedicated community of R users and developers, and now I have no problems recommending it even for novice data analysts. Further, many now use R via RStudio, which makes using R even easier, as well as more powerful.
 
 Critically, the tutorials and analysis examples we share in the meet-ups will be done using R and RStudio, so for that reason alone it would be helpful for those who haven't used R to go ahead and take the plunge now :)
 
@@ -14,7 +14,7 @@ To get started, all you need to do is...
 
 Install the appropriate version of R for your machine: <https://cran.r-project.org/bin/windows/base/> (saying yes to the default set up suggestions unless you know better)
 
-Install the appropriate version of RStudio IDE: <https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads> (saying yes to the default set up suggestions unless you know better)
+Install the appropriate version of RStudio: <https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads> (saying yes to the default set up suggestions unless you know better)
 
 And if you can't install these on your machine, or don't want to, you can do pretty much anything in the cloud using a free account: <https://posit.cloud/>
 

@@ -18,6 +18,7 @@ website:
       - 1_1_intro.qmd
       - 1_2_first_steps.qmd
       - 1_3_learning_r_links.qmd
+      - 1_4_data_viz.qmd
       
 format:
   html:

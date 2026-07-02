@@ -1,41 +1,5 @@
 [
   {
-    "objectID": "1_3_learning_r_links.html",
-    "href": "1_3_learning_r_links.html",
-    "title": "Helpful links",
-    "section": "",
-    "text": "One of the great things about using R is the global community of R users and developers who collectively design and share a wealth of learning materials freely online. I’ve listed some of my favorites below.\n\nGetting started with R\nRYouWithMe is a great starter tutorial from RLadiesSydney and much better than anything I could put together. See more here\nSwirl is an R package that you can install and then use to work your way through interactive tutorials. See more here.\nPosit Recipes are code snippets for doing all kinds of tasks with R. See more here.\nMany Cheatsheets have been created to help with various tasks in R. See more here.\nIf you want an entire book style introduction, there are few better than R for Data Science.\n\n\nStyle guides\nAs you develop R scripts, it helps to use a consistent style that will make them easier to read and easier to spot errors. It doesn’t particularly matter what style you use, just as long as you are consistent. Here are some example style guides:\nGoogle’s R Style Guide\nTidyverse Style Guide",
-    "crumbs": [
-      "Home",
-      "Helpful links"
-    ]
-  },
-  {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "Deploying to the web",
-    "section": "",
-    "text": "Deploying to the web\nI have set up a Netlify account and registered the your-own-statistician.com domain.\nThe website is created by clicking render, which builds all the files in the _site folder.\nAll the code is on github https://github.com/DarrenDahly/yos_quarto_web\nWhen the _site folder is updated, commit and push the changes to github.\nNetlify monitors the _site folder on github, and pushes it from there out to the web.\nChange code -&gt; Render site -&gt; Push to github\n\n\nGithub set up\nhttps://github.com/DarrenDahly/yos_quarto_web https://stackoverflow.com/questions/39435240/rstudio-changing-origin-for-git-version-control-of-project git remote add origin https://github.com/DarrenDahly/yos_quarto_web\ngit branch - M main\ngit push -u origin main\nhttps://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html https://psiweb.org/docs/default-source/sig—aims/a-guide-to-using-git-and-github-through-r-studio-201910.pdf?sfvrsn=c5a7db_0\nNetlify:\nhttps://app.netlify.com/projects/delicate-yeot-fde6bf/deploys/6a216f55f56dfc04d0338e52\nlog in witi github darrendl1@gmail.com"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Your Own Statistician",
-    "section": "",
-    "text": "Everything that follows is based on a simple set of premises.\n\nAnswers to important research questions in medicine and health often rely on quantitative data.\nDesigning studies to generate useful quantitative data requires expertise. The same goes for analyzing the data and interpreting the results.\nMedical statisticians often have the expertise to contribute to the design, analysis and interpretation of quantitative data, but there are very few of them around.\nThis means that many or most researchers working in medicine and health have to serve as their own statistician, whether they realize it or not.\nFailure to take this responsibility seriously can lead to otherwise avoidable research waste, as flaws in study design, analysis and interpretation can render research results useless, or even harmful.\nPrimum non nocere, or GTFO\n\n\nYour-Own-Statistician is an informal, weekly, online meet-up aimed at supporting post-graduate students in the College of Medicine and Health at University College Cork to develop and maintain their quantitative data skills.\nMeet-ups will be on Friday mornings at 10:30-11:30 via Teams (and occasionally in person). You are welcome to attend as you are able. You do not need to RSVP, and you do not need to let me know when you can’t make it :)\nGeneral topics will include:\n\nStatistical and causal inference\nStudy design and data analysis planning\nEvaluation of clinical prediction models/algorithms\nReproducible statistical programming with R and RStudio\nData visualisation\nData management and stewardship\n\nThe meet-up format will rotate through:\n\nTraining seminars/tutorials\nData analysis “show-and-tells”\nOpen Q&A and troubleshooting sessions\nArticle discussions\n\nThis website will be used to share materials."
-  },
-  {
-    "objectID": "1_1_intro.html",
-    "href": "1_1_intro.html",
-    "title": "Why R?",
-    "section": "",
-    "text": "R is a programming language designed to support the statistical analysis of data. It has several distinct advantages over commonly used statistical software, as well as some costs, all of which we will discuss.\nI started my own research career using Stata and still hold it in high esteem. Eventually though I ran across a method for analyzing data that was only possible with R, so I took the plunge. It was hard at first. New things always are. But I powered through and soon came to realize the power of R as an open-source programming language that pretty much allowed me to do anything I wanted with research data; and to do it more efficiently, with fewer errors.\nThe challenges of using R have greatly diminished over time, largely due to a vast, dedicated community of R users and developers, and now I have no problems recommending it even for novice data analysts. Further, many now use R via a “integrated development environment” (a fancy term for interface) called RStudio, which makes using R even easier, as well as more powerful.\nCritically, the tutorials and analysis examples we share in the meet-ups will be done using R and RStudio, so for that reason alone it would be helpful for those who haven’t used R to go ahead and take the plunge now :)\nTo get started, all you need to do is…\nInstall the appropriate version of R for your machine: https://cran.r-project.org/bin/windows/base/ (saying yes to the default set up suggestions unless you know better)\nInstall the appropriate version of RStudio IDE: https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads (saying yes to the default set up suggestions unless you know better)\nAnd if you can’t install these on your machine, or don’t want to, you can do pretty much anything in the cloud using a free account: https://posit.cloud/\nOnce you have R and RStudio installed, have a look at this introduction to the RStudio interface from RLadiesSydney",
-    "crumbs": [
-      "Home",
-      "Why R?"
-    ]
-  },
-  {
     "objectID": "1_2_first_steps.html",
     "href": "1_2_first_steps.html",
     "title": "First steps",
@@ -66,6 +30,42 @@
     "crumbs": [
       "Home",
       "First steps"
+    ]
+  },
+  {
+    "objectID": "1_1_intro.html",
+    "href": "1_1_intro.html",
+    "title": "Why R?",
+    "section": "",
+    "text": "R is a programming language designed to support the statistical analysis of data. It has several distinct advantages over commonly used statistical software, as well as some costs, all of which we will discuss.\nI started my own research career using Stata and still hold it in high esteem. Eventually though I ran across a method for analyzing data that was only possible with R, so I took the plunge. It was hard at first. New things always are. But I powered through and soon came to realize the power of R as an open-source programming language that pretty much allowed me to do anything I wanted with research data; and to do it more efficiently, with fewer errors.\nThe challenges of using R have greatly diminished over time, largely due to a vast, dedicated community of R users and developers, and now I have no problems recommending it even for novice data analysts. Further, many now use R via RStudio, which makes using R even easier, as well as more powerful.\nCritically, the tutorials and analysis examples we share in the meet-ups will be done using R and RStudio, so for that reason alone it would be helpful for those who haven’t used R to go ahead and take the plunge now :)\nTo get started, all you need to do is…\nInstall the appropriate version of R for your machine: https://cran.r-project.org/bin/windows/base/ (saying yes to the default set up suggestions unless you know better)\nInstall the appropriate version of RStudio: https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads (saying yes to the default set up suggestions unless you know better)\nAnd if you can’t install these on your machine, or don’t want to, you can do pretty much anything in the cloud using a free account: https://posit.cloud/\nOnce you have R and RStudio installed, have a look at this introduction to the RStudio interface from RLadiesSydney",
+    "crumbs": [
+      "Home",
+      "Why R?"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Your Own Statistician",
+    "section": "",
+    "text": "Everything that follows is based on a simple set of premises:\n\nAnswers to important research questions in medicine and health often rely on quantitative data.\nDesigning studies to generate useful quantitative data requires expertise. The same goes for analyzing the data and interpreting the results.\nStatisticians and epidemiologists often have the expertise to contribute to the design, analysis and interpretation of quantitative health research data, but there are very few of them around.\nThis means that many or most researchers working in medicine and health have to serve as their own statistician, whether they realize it or not.\nFailure to take this responsibility seriously can lead to otherwise avoidable research waste, as flaws in study design, analysis and interpretation can render research results useless, or even harmful.\nPrimum non nocere, or GTFO\n\n\nYour-Own-Statistician is an informal, weekly, online meet-up aimed at supporting post-graduate students in the College of Medicine and Health at University College Cork to develop and maintain their quantitative data skills.\nMeet-ups will be on Friday mornings at 10:30-11:30 via Teams (and occasionally in person). You are welcome to attend as you are able. You do not need to RSVP, and you do not need to let me know when you can’t make it :)\nGeneral topics will include:\n\nStatistical and causal inference\nStudy design and data analysis planning\nEvaluation of clinical prediction models/algorithms\nReproducible statistical programming with R and RStudio\nData visualisation\nData management and stewardship\n\nThe meet-up format will rotate through:\n\nTraining seminars/tutorials\nData analysis “show-and-tells”\nOpen Q&A and troubleshooting sessions\nArticle discussions\n\nThis website will be used to share materials. It is obviously an ongoing work in progress.\nSource code"
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Deploying to the web",
+    "section": "",
+    "text": "Deploying to the web\nI have set up a Netlify account and registered the your-own-statistician.com domain.\nThe website is created by clicking render, which builds all the files in the _site folder.\nAll the code is on github https://github.com/DarrenDahly/yos_quarto_web\nWhen the _site folder is updated, commit and push the changes to github.\nNetlify monitors the _site folder on github, and pushes it from there out to the web.\nChange code -&gt; Render site -&gt; Push to github\n\n\nGithub set up\nhttps://github.com/DarrenDahly/yos_quarto_web https://stackoverflow.com/questions/39435240/rstudio-changing-origin-for-git-version-control-of-project git remote add origin https://github.com/DarrenDahly/yos_quarto_web\ngit branch - M main\ngit push -u origin main\nhttps://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html https://psiweb.org/docs/default-source/sig—aims/a-guide-to-using-git-and-github-through-r-studio-201910.pdf?sfvrsn=c5a7db_0\nNetlify:\nhttps://app.netlify.com/projects/delicate-yeot-fde6bf/deploys/6a216f55f56dfc04d0338e52\nlog in witi github darrendl1@gmail.com"
+  },
+  {
+    "objectID": "1_3_learning_r_links.html",
+    "href": "1_3_learning_r_links.html",
+    "title": "Helpful links",
+    "section": "",
+    "text": "One of the great things about using R is the global community of R users and developers who collectively design and share a wealth of learning materials freely online. I’ve listed some of my favorites below.\n\nGetting started with R\nRYouWithMe is a great starter tutorial from RLadiesSydney and much better than anything I could put together. See more here\nSwirl is an R package that you can install and then use to work your way through interactive tutorials. See more here.\nPosit Recipes are code snippets for doing all kinds of tasks with R. See more here.\nMany Cheatsheets have been created to help with various tasks in R. See more here.\nIf you want an entire book style introduction, there are few better than R for Data Science.\n\n\nStyle guides\nAs you develop R scripts, it helps to use a consistent style that will make them easier to read and easier to spot errors. It doesn’t particularly matter what style you use, just as long as you are consistent. Here are some example style guides:\nGoogle’s R Style Guide\nTidyverse Style Guide\n\n\nOther useful general R resources\nHands-On Programming with R",
+    "crumbs": [
+      "Home",
+      "Helpful links"
     ]
   }
 ]

@@ -23,3 +23,7 @@ As you develop R scripts, it helps to use a consistent **style** that will make 
 [Google's R Style Guide](https://google.github.io/styleguide/Rguide.html)
 
 [Tidyverse Style Guide](https://style.tidyverse.org/)
+
+# Other useful general R resources
+
+[Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
