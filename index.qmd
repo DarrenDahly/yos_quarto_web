@@ -6,7 +6,7 @@ Everything that follows is based on a simple set of premises.
 
 - Answers to important research questions in medicine and health often rely on quantitative data.
 
-- Designing studies to generate useful quantitative data requires expertise. So same goes for analyzing the data and interpreting the results.
+- Designing studies to generate useful quantitative data requires expertise. The same goes for analyzing the data and interpreting the results.
 
 - Medical statisticians often have the expertise to contribute to the design, analysis and interpretation of quantitative data, but there are very few of them around.
 
