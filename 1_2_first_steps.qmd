@@ -4,9 +4,11 @@ editor_options:
   chunk_output_type: inline
 ---
 
-In this session we will introduce the most fundamental aspects of using R, and at the end of the session you should feel more comfortable engaging with the many online resources that are out there to help people use R to analyse data.
+In this session we will introduce the most fundamental aspects of using R, and at the end of the session you should feel more comfortable engaging with the many online resources that are out there to help people learn R to analyse data.
 
-You should come away from this tutorial with a general sense of meaning for the following terms: **data types** - **data structures** - **objects** - **functions** - **arguments** - **object classes** - **assignment** - **operators** - **dataframe** - **pipes** - **package** - **CRAN**
+You should come away from this tutorial with a general sense of meaning for the following terms:
+
+**data types** - **data structures** - **objects** - **functions** - **arguments** - **object classes** - **assignment** - **operators** - **dataframes** - **pipes** - **packages** - **CRAN**
 
 # First steps
 
@@ -22,9 +24,9 @@ Working from right to left, there are three key elements in the code above.
 
 The first is the **function** `c()`. A function in R is like a function in math. It is something that takes one or more inputs and converts them into an output. In this example, the function `c()` creates a **vector** containing the three numbers `1, 2, 3`.
 
-The next element is the **assignment operator** `<-`, and the third is `x`, which is an **object** we've now created, using `<-` , that contains the results of the function `c(1, 2, 3)`.
+The next element is the **assignment operator** `<-`, and the final one is `x`, which is an **object** we've now created, using `<-` , that contains the results of the function `c(1, 2, 3)`.
 
-At it's most basic, R scripting is just repeating this process, using the right functions on the relevant inputs to create new, useful outputs.
+At it's most basic, R scripting is just repeating this process, using the right functions on the relevant input objects to create new, useful output oubjects.
 
 `output <- function(inputs)`
 
@@ -58,11 +60,13 @@ In the example above, we took three pieces of data, all of which were **numbers*
   typeof(x)
 ```
 
-In this example, **numeric** refers to the **class** of the object, while a vector is the most primitive **data structure** in R [^1]. It is essentially a list of *n* elements that are all of the same **type**, where type is a description of how the data are stored in memory (and "double" means [double-precision floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)). We don't want to get too deep in the weeds here and there is a close correspondence between **class** and **type**, but the important thing to understand more generally is that the class of an object can influence the behavior of functions we might use on said object. We will come back to this idea shortly.
+In this example, **numeric** refers to the **class** of the object, while a vector is the most primitive **data structure** in R [^1]. It is essentially a list of *n* elements that are all of the same **type**, where type is a description of how the data are stored in memory (and "double" means [double-precision floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) which is a common way to store decimal numbers).
 
 [^1]: For those coming from other programming languages, there are technically no scalars in R, just vectors of length 1. But I'm not a programmer and have no idea why anyone would care about this, so will leave it at that :)
 
-Of course data comes in forms other than numbers. For example, maybe we are working with **characters** (or stings, or text).
+We don't want to get too deep in the weeds here, but because there is a close correspondence between **class** and **type**, the important thing to understand more generally is that the class of an object can influence the behavior of functions we might use on said object. We will come back to this idea shortly.
+
+Of course data comes in forms other than numbers. For example, maybe we are working with **character** data (also known as sting or text data).
 
 ```{r}
 
@@ -93,7 +97,7 @@ To create a vector of integers, we have to explicitly tell R we want integers, a
   typeof(integers)
 ```
 
-Critically, if we try to combine different data types in the same vector, R will convert all the elements as needed to the type with the lowest information value.
+Critically, if we try to combine different data types in the same vector, R will convert all the elements as needed to remove the conflict.
 
 ```{r}
 
@@ -103,7 +107,7 @@ Critically, if we try to combine different data types in the same vector, R will
   typeof(z)
 ```
 
-In the example above, combining numbers and characters into the vector turned everything into character data, hence the `""` now surrounding the numbers. Similarly, if we combine integers and decimal numbers in a vector, R will force them all to be stored as numbers.
+In the example above, combining numbers and characters into the vector turned everything into character data since characters can't possibly be numbers, and hence the `""` now surrounding the numbers. Similarly, if we combine integers and decimal numbers in a vector, R will force them all to be stored as decimal numbers, since converting decimal numbers to integers could result in information loss.
 
 ```{r}
 
@@ -113,11 +117,55 @@ In the example above, combining numbers and characters into the vector turned ev
   typeof(x)
 ```
 
+I also want to introduce integer type data that are associated with character labels. We call these **factor** data and they are very useful -- so much so that we will come back to them in a separate tutorial later.
+
+```{r}
+
+  y
+  class(y) # y starts as a character vector
+  # An error, because we can't turn text into a number:
+  as.numeric(y) 
+  
+  # We can create a factor vector like this:
+  y_factor <- factor(y) 
+  y_factor # This displays the labels (called levels)
+  
+  # Not an error because a factor is a labelled integer:
+  as.numeric(y_factor) 
+  class(y_factor)
+  typeof(y_factor)
+  levels(y_factor)
+
+
+```
+
+And finally we have dates, which are numeric data that are presented in a date format. Again, working with dates will motivate it's own special treatment later.
+
+```{r}
+
+  dates <- c("2025-12-12", "2025-12-13")
+  dates
+  typeof(dates)
+  
+  dates <- as.Date(dates)
+  dates
+  typeof(dates) 
+  class(dates)
+  
+  # c(dates, y) # Tries to convert characters to date but can't
+  c(dates, x) # Does convert manage to convert numbers to dates...
+  as.numeric(c(dates, x))
+  
+  # Because dates are the number of days before/since Jan 1, 1970
+  as.Date(0)
+  
+```
+
 # Data frames
 
-While vectors are incredibly exciting, they can only take us so far. Ultimately we want to work with datasets, and as we all know, datasets are two-dimensional matrices that contain variables (or fields) in the columns that characterize the observations in the rows.
+While vectors are an incredibly exciting data structure, they can only take us so far. Ultimately we want to work with datasets, and as we all know, datasets are two-dimensional matrices that contain variables (or fields) in the columns that characterize the observations in the rows.
 
-R has `matrix` (two dimensions) and `array` (more than two dimensions) data structures, but like vectors, they can only contain a single type of data, and that's not going to get us very far towards the types of datasets we use in medicine and health research.
+R has **matrix** (two dimensions) and **array** (more than two dimensions) data structures, but like vectors, they can only contain a single type of data, and that's not going to get us very far towards the types of datasets we use in medicine and health research.
 
 ```{r}
 
@@ -146,7 +194,7 @@ Lists in R can actually contain just about anything, including entire vectors an
 
 And this brings us to the most important data structure in R, the **data.frame**.
 
-On a technical level, a data.frame in R is a list containing vectors. While each vector can only contain one type of data (because they are vectors), a data.frame can contain vectors of different types (because it's a list). Importantly, the vectors in a data.frame much all have the same number of elements (or **lengths**), and all the vectors must have a **name**.
+On a technical level, a data.frame in R is a **named list** containing vectors. While each vector can only contain one type of data (because they are vectors), a data.frame can contain vectors of different types (because it's a list). Importantly, the vectors in a data.frame much all have the same number of elements (or **lengths**), and all the vectors must have a **name**.
 
 ```{r}
 
@@ -165,7 +213,9 @@ On a technical level, a data.frame in R is a list containing vectors. While each
 
 # Selection
 
-In the examples above, we created a number of objects that we can think of as being made up of other, "smaller" objects. For example, the numeric vector `x <- c(1, 2, 3)` contains 3 numbers. We often want to extract bits of information from larger objects and the main way to do this is through selection using breakets `[ ]` . For example, if I want to the first element of a one dimensional vector, I can do this:
+In the examples above, we created objects that we can think of as being made up of other, "smaller" objects. For example, the numeric vector `x <- c(1, 2, 3)` contains three numbers each of which we can think of as three separate vectors of length 1.
+
+We often want to extract bits of information from larger objects, and the main way to do this is through selection using brackets `[ ]` . For example, if I want to the first element of a one dimensional vector, I can do this:
 
 ```{r}
 
@@ -184,18 +234,78 @@ For a two-dimensional object like our data.frame, I can do this:
 
 ```
 
-Lists are a little more complicated, in that they introduce the need for double brakets `[[ ]]` and lead us to
+Lists are a little more complicated. The best analogy I've come across is that they are like a train composed of [train cars](https://rstudio-education.github.io/hopr/r-notation.html#fig:trains). If we use `[`\] to select elements of a list, we get a list object of length 1 with it's contents.
 
 ```{r}
 
-  big_list[[2]] # Whatever is contained as the first element of the list
+  big_list[1] # Select the first train car
+  class(big_list[1]) # List
+```
+
+However, if you want to fully extract whatever is inside the train car, we need to use double brackets `[[ ]]`.
+
+```{r}
+
+  big_list[[1]] # Select whatever is *inside* the first train car
+  class(big_list[[1]]) # Vector
   
-  big_list[2]
+```
+
+These rules are important since data.frames are also lists, and because the behavior of functions can be influenced by the class of the objects they are acting on (as I mentioned above).
+
+```{r}
+
+  class(data[[1]]) # Vector
+  class(data[1])   # Data.frame
+```
+
+A final point relevant to dataframes (and named lists more generally) is the `$` operator, which is equivalent to `[[]]` but that uses the name of the column rather than the index.
+
+```{r}
+
+  data[[1]]
+  class(data[[1]]) # Numeric vector
+  
+  data$rank
+  class(data$rank) # Numeric vector
+  
+  data$rank[1] # First element of the vector
+```
+
+In the examples above, we've used selection to extract elements from an object, but we can also use "overwrite" elements in the same way. You will do this a lot, unless you are only ever in receipt of perfect data :)
+
+```{r}
+
+  x
+  x[1] <- 99
+  x
 ```
 
 # Functions and packages
 
-The behavior of functions is partly controlled by its **arguments**. For example, consider the following two matrices.
+I have spent many years using and teaching R. Whenever you are having a problem with R that just doesn't make sense, experience says that it will often come down to one of two problems:
+
+- There is a typo in your code. Look again. And again. It's there. I promise.
+
+- If it's not a typo, then the class of the object you applying a function to won't allow the function to do what you want it to do. This is to say that functions can be sensitive to object class.
+
+For example, the function `mean` works on numeric vectors.
+
+```{r}
+  
+# This doesn't work because data[1] is a dataframe
+  class(data[1])
+  mean(data[1])  
+```
+
+```{r}
+
+# This works because data[[1]] is a vector
+  class(data[[1]])
+  mean(data[[1]])
+```
+
+The behavior of functions is also controlled by its **arguments**. For example, consider the following two matrices.
 
 ```{r}
 
@@ -204,7 +314,6 @@ The behavior of functions is partly controlled by its **arguments**. For example
   
   matrix_2 <- matrix(c(1:10), nrow = 5)
   matrix_2
-
 ```
 
 In that example, `nrow` is an argument of the function `matrix` that set the number of rows for the resulting matrix.
@@ -214,15 +323,13 @@ The order of arguments in a function matters in that you don't technically need 
 ```{r}
 
   matrix(c(1:10), 5) 
-
 ```
 
-Or you can use the arguments out of order but only if you name them.
+Or you can use the arguments out of order, but only if you name them.
 
 ```{r}
 
   matrix(nrow = 5, data = c(1:10)) 
-
 ```
 
 And many arguments have defaults. For example, the default for `matrix` is `nrow = 1`.
@@ -230,16 +337,15 @@ And many arguments have defaults. For example, the default for `matrix` is `nrow
 ```{r}
   
   matrix(data = c(1:10)) # Assumes you want nrow = 1
-  
 ```
 
-So how can you possibly know all of this about a particular function? Thankfully R has a built in help function. To learn about a function you just type in `?function_name` and a window with information about that function will open.
+So how can you possibly know all of this about a particular function? Thankfully R has a built in help function. To learn about a function you just type in `?function_name` and a window with information about that function will open. So in your own console, type `?mean` and read what pops up in the help tab in your RStudio view.
 
 # Pipes
 
 You will regularly need for than one function to accomplish your goals. There are basically three ways you might code the use of multiple functions, one of which involves the **pipe** operator, `|>`.
 
-Let's say we want to take the mean of some set of numbers and then round the result to 1 decimal place. Here are three ways to code this:
+Let's say we want to take the mean of some set of numbers and then round the result to 1 decimal place. Here are at least three ways to code this:
 
 ```{r}
 
@@ -249,7 +355,7 @@ Let's say we want to take the mean of some set of numbers and then round the res
   x <- round(x, 1)   
   x    
 
-# Option 2: Nesting     
+# Option 2: Nesting functions   
   x <- round(mean(c(1, 43, 4019, 4)), 1)    
   x    
   
@@ -259,3 +365,48 @@ Let's say we want to take the mean of some set of numbers and then round the res
 ```
 
 As you can see, the basic function of the pipe `|>` is to take what's on the left and use it as the first argument in the function on the right. How you choose to write your code is entirely up to you. My own work tends to be a mix of all three options, though generally I try to avoid nesting because I find it more challenging to read and this to spot errors in.
+
+# Packages and CRAN
+
+As I've said, R is an open source programming language with a vibrant community of users and developers. This community, over many years, has collectively written many thousands of **packages**. The vast majority of those packages can be described as collections of functions, as well as perhaps example data.frames. So a big part of using R is to identify and then accesss the package(s) that contain the function(s) you need to conduct the analysis you want to conduct.
+
+An important place to find useful R packages are the CRAN [Task Views](https://cran.r-project.org/web/views/). These are basically curated lists of packages organized by area.
+
+So where do you get packages? For now the answer is that you get them from CRAN and it's [repository of contributed packages](https://cran.r-project.org/web/packages/available_packages_by_date.html). Thankfully, access to CRAN is basically built into RStudio, so if you want to install a package, you use the `install.packages` function. In the next tutorial, we are going to introduce ggplot for data visualization, so let's install that package now by pasting this into your console: `install.packages("ggplot2")`.
+
+When you want to actually load the package, you take it out of the "library".
+
+```{r}
+
+  library(ggplot2)
+```
+
+And now you have access to the package contents in your environment.
+
+```{r}
+
+  data |>
+  ggplot(aes(x = player, y = rank)) +
+    geom_point()
+```
+
+# Summary
+
+Click the links below to review key terms as explained in [Hands-On Programming with R](https://rstudio-education.github.io/hopr/) by Garrett Grolemund.
+
+[data types](https://rstudio-education.github.io/hopr/r-objects.html#atomic-vectors)
+
+[data structures](https://rstudio-education.github.io/hopr/r-objects.html#class)
+
+[selection](https://rstudio-education.github.io/hopr/r-notation.html#selecting-values)
+
+[objects](https://rstudio-education.github.io/hopr/basics.html#objects)
+
+[functions](https://rstudio-education.github.io/hopr/basics.html#functions)
+
+[object classes](https://rstudio-education.github.io/hopr/r-objects.html#class)
+
+[dataframes](https://rstudio-education.github.io/hopr/r-objects.html#data-frames)
+
+[packages](https://rstudio-education.github.io/hopr/packages2.html)
+

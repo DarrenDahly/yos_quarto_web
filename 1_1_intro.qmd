@@ -4,9 +4,9 @@ title: "Why R?"
 
 R is a programming language designed to support the statistical analysis of data. It has several distinct advantages over commonly used statistical software, as well as some costs, all of which we will discuss.
 
-I started my own research career using Stata and still hold it in high esteem. Eventually though I ran across a method for analyzing data that was only possible with R, so I took the plunge. It was hard at first. New things always are. But I powered through and soon came to realize the power of R as an open-source programming language that pretty much allowed me to do anything I wanted with research data, and to do it more efficiently, with fewer errors.
+I started my own research career using Stata and still hold it in high esteem. Eventually though I ran across a method for analyzing data that was only possible with R, so I took the plunge. It was hard at first. New things always are. But I powered through and soon came to realize the power of R as an open-source programming language that pretty much allowed me to do anything I wanted with research data; and to do it more efficiently, with fewer errors.
 
-The challenges of using R have greatly diminished over time, largely due to a vast, dedicated community of R users and developers, and now I have no problems recommending it even for those who are novices to analyzing data. Further, many now use R via a "integrated development environment" (a fancy term for interface) called RStudio, which makes using R even easier, as well as more powerful.
+The challenges of using R have greatly diminished over time, largely due to a vast, dedicated community of R users and developers, and now I have no problems recommending it even for novice data analysts. Further, many now use R via a "integrated development environment" (a fancy term for interface) called RStudio, which makes using R even easier, as well as more powerful.
 
 Critically, the tutorials and analysis examples we share in the meet-ups will be done using R and RStudio, so for that reason alone it would be helpful for those who haven't used R to go ahead and take the plunge now :)
 
