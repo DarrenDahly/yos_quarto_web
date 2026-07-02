@@ -17,8 +17,9 @@ website:
       - section: "Data science with R and RStudio"
       - 1_1_intro.qmd
       - 1_2_first_steps.qmd
-      - 1_3_learning_r_links.qmd
-      - 1_4_data_viz.qmd
+      - 1_3_data_viz.qmd
+      - 1_99_learning_r_links.qmd
+
       
 format:
   html:
