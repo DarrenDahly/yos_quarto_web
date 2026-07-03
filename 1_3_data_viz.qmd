@@ -1,3 +1,101 @@
 ---
-title: "Data visualization"
+title: "Principles of Data visualization"
 ---
+
+Data visualization plays at least two critical roles in medical and health research. The first, more prominent role is the visualization of research results to support their interpretation. The second, less glamorous role is in the exploration of research data in order to confirm its contents, completeness and quality. In my own work as a statistician, I spend a lot more time making plots, the vast majority of which are never seen by another human, than I do analyzing data with statistical models. This contrasts with what I believe is a common perception that visualizing data is some how tangential or secondary to data analysis. Nothing could be further from the truth and so we will spend a good bit of time on our data visualization skills.
+
+The specific tool we will use for data visualization is the R package `ggplot2`. However, before we dive into the specifics of code, I was to introduce what I think are the key principles of data visualization that you might think about before actually sitting down to create a particular figure or other visualization.
+
+------------------------------------------------------------------------
+
+- Design with purpose
+
+  - Before you do anything else, decide what you want to convey and be able to explain why. Think about your audience. Once you have that down, only then figure out how to implement your ideas. And don’t let your current knowledge of visualization software dictate your designs. Find and learn the tools that help you create the visualization you want, rather than select visualizations that happen to be facilitated by the tools you already know how to use.
+
+- Only include visual elements that support that purpose
+
+  - No "chart junk"
+
+- Use perceptually accurate visual representations of information
+
+- Any statistics/estimates should be presented with visual cues about their uncertainty
+
+- Emphasize the key message(s) of the visualization to you audience by using: 
+
+  - Annotations
+
+  - High contrast visualization
+
+  - Titles, subtitles, and captions
+
+- Show the raw/underlying data where possible
+
+- Make sure your visualizations are self-explanatory
+
+  - Legends/guides/axes labels
+
+  - Source(s) of data, with dates as relevant
+
+  - Methods used to produce statistics/estimates
+
+  - Abbreviations 
+
+  - Units of measurement
+
+  - Scales
+
+- Accessibility
+
+  - Color choices
+
+  - Alt text
+
+- Corporate identity 
+
+  - Titles
+
+  - Logos
+
+  - Colors
+
+- Outputs
+
+  - File formats
+
+  - Resolutions
+
+- Reproducibility
+
+  - Open code
+
+  - Links to data when possible
+
+# Related resources
+
+## Books
+
+[The Art of Data Visualization with ggplot2 by Nicola Rennie](https://nrennie.rbind.io/art-of-viz/)
+
+[Data Visualization: A Practical Introduction by Kieran Healy](https://kieranhealy.org/publications/dataviz/)
+
+[The Visual Display of Quantitative Information by Edward Tufte](https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/)
+
+## Papers
+
+[Best Practices for Data Visualisation Insights, advice, and examples (with code) to make data outputs more readable, accessible, and impactful. By Andreas Krause, Nicola Rennie, & Brian Tarran](https://royal-statistical-society.github.io/datavisguide/RSS-data-vis-guide.pdf)
+
+[Error Bars Considered Harmful: Exploring Alternate Encodings for Mean and Error](https://pmc.ncbi.nlm.nih.gov/articles/PMC6214189/)
+
+[Presenting parasitological data: the good, the bad and the error bar](https://pubmed.ncbi.nlm.nih.gov/26118403/)
+
+## Courses/tutorials/other
+
+[2026 30 day chart challenge, by Ilya Kashnitsky](https://github.com/ikashnitsky/30daychart2026?tab=readme-ov-file)
+
+[Collections of useful, freely-available resources and links on data-related topics, curated by Nicola Rennie](https://nrennie.rbind.io/resources/)
+
+[Saloni's guide to data visualization](https://www.scientificdiscovery.dev/p/salonis-guide-to-data-visualization)
+
+[Tufte in R](http://motioninsocial.com/tufte/)
+
+[Which, chart should I use, and why? Information design for the human brain](https://paldhous.github.io/NICAR/2016/infodesign.html)

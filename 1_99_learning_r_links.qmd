@@ -1,5 +1,5 @@
 ---
-title: "Helpful links"
+title: "Helpful Links"
 ---
 
 One of the great things about using R is the global community of R users and developers who collectively design and share a wealth of learning materials freely online. I've listed some of my favorites below.

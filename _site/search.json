@@ -1,35 +1,79 @@
 [
   {
+    "objectID": "1_3_data_viz.html",
+    "href": "1_3_data_viz.html",
+    "title": "Principles of Data visualization",
+    "section": "",
+    "text": "Data visualization plays at least two critical roles in medical and health research. The first, more prominent role is the visualization of research results to support their interpretation. The second, less glamorous role is in the exploration of research data in order to confirm its contents, completeness and quality. In my own work as a statistician, I spend a lot more time making plots, the vast majority of which are never seen by another human, than I do analyzing data with statistical models. This contrasts with what I believe is a common perception that visualizing data is some how tangential or secondary to data analysis. Nothing could be further from the truth and so we will spend a good bit of time on our data visualization skills.\nThe specific tool we will use for data visualization is the R package ggplot2. However, before we dive into the specifics of code, I was to introduce what I think are the key principles of data visualization that you might think about before actually sitting down to create a particular figure or other visualization.",
+    "crumbs": [
+      "Home",
+      "Principles of Data visualization"
+    ]
+  },
+  {
+    "objectID": "1_3_data_viz.html#books",
+    "href": "1_3_data_viz.html#books",
+    "title": "Principles of Data visualization",
+    "section": "Books",
+    "text": "Books\nThe Art of Data Visualization with ggplot2 by Nicola Rennie\nData Visualization: A Practical Introduction by Kieran Healy\nThe Visual Display of Quantitative Information by Edward Tufte",
+    "crumbs": [
+      "Home",
+      "Principles of Data visualization"
+    ]
+  },
+  {
+    "objectID": "1_3_data_viz.html#papers",
+    "href": "1_3_data_viz.html#papers",
+    "title": "Principles of Data visualization",
+    "section": "Papers",
+    "text": "Papers\nBest Practices for Data Visualisation Insights, advice, and examples (with code) to make data outputs more readable, accessible, and impactful. By Andreas Krause, Nicola Rennie, & Brian Tarran\nError Bars Considered Harmful: Exploring Alternate Encodings for Mean and Error\nPresenting parasitological data: the good, the bad and the error bar",
+    "crumbs": [
+      "Home",
+      "Principles of Data visualization"
+    ]
+  },
+  {
+    "objectID": "1_3_data_viz.html#coursestutorialsother",
+    "href": "1_3_data_viz.html#coursestutorialsother",
+    "title": "Principles of Data visualization",
+    "section": "Courses/tutorials/other",
+    "text": "Courses/tutorials/other\n2026 30 day chart challenge, by Ilya Kashnitsky\nCollections of useful, freely-available resources and links on data-related topics, curated by Nicola Rennie\nSaloni’s guide to data visualization\nTufte in R\nWhich, chart should I use, and why? Information design for the human brain",
+    "crumbs": [
+      "Home",
+      "Principles of Data visualization"
+    ]
+  },
+  {
     "objectID": "1_2_first_steps.html",
     "href": "1_2_first_steps.html",
-    "title": "First steps",
+    "title": "First Steps",
     "section": "",
     "text": "In this session we will introduce the most fundamental aspects of using R, and at the end of the session you should feel more comfortable engaging with the many online resources that are out there to help people learn R to analyse data.\nYou should come away from this tutorial with a general sense of meaning for the following terms:\ndata types - data structures - objects - functions - arguments - object classes - assignment - operators - dataframes - pipes - packages - CRAN",
     "crumbs": [
       "Home",
-      "First steps"
+      "First Steps"
     ]
   },
   {
     "objectID": "1_2_first_steps.html#as-aside-on-assignment",
     "href": "1_2_first_steps.html#as-aside-on-assignment",
-    "title": "First steps",
+    "title": "First Steps",
     "section": "As aside on assignment",
     "text": "As aside on assignment\nOther programming languages use = as an assignment operator and technically you can use it in R as well, though people have written many words about why you shouldn’t.\n\n  x = c(1, 2, 3)      \n  x\n\n[1] 1 2 3\n\n\nThe assignment operator &lt;- can also be used as -&gt; though you will only rarely see this in practice.\n\n  c(1, 2, 3) -&gt; x      \n  x\n\n[1] 1 2 3",
     "crumbs": [
       "Home",
-      "First steps"
+      "First Steps"
     ]
   },
   {
     "objectID": "1_2_first_steps.html#footnotes",
     "href": "1_2_first_steps.html#footnotes",
-    "title": "First steps",
+    "title": "First Steps",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nFor those coming from other programming languages, there are technically no scalars in R, just vectors of length 1. But I’m not a programmer and have no idea why anyone would care about this, so will leave it at that :)↩︎\nThere are also complex and raw types, but I’ve never used either and don’t suspect you will need to either.↩︎",
     "crumbs": [
       "Home",
-      "First steps"
+      "First Steps"
     ]
   },
   {
@@ -60,12 +104,12 @@
   {
     "objectID": "1_99_learning_r_links.html",
     "href": "1_99_learning_r_links.html",
-    "title": "Helpful links",
+    "title": "Helpful Links",
     "section": "",
     "text": "One of the great things about using R is the global community of R users and developers who collectively design and share a wealth of learning materials freely online. I’ve listed some of my favorites below.\n\nGetting started with R\nRYouWithMe is a great starter tutorial from RLadiesSydney and much better than anything I could put together. See more here\nSwirl is an R package that you can install and then use to work your way through interactive tutorials. See more here.\nPosit Recipes are code snippets for doing all kinds of tasks with R. See more here.\nMany Cheatsheets have been created to help with various tasks in R. See more here.\nIf you want an entire book style introduction, there are few better than R for Data Science.\n\n\nStyle guides\nAs you develop R scripts, it helps to use a consistent style that will make them easier to read and easier to spot errors. It doesn’t particularly matter what style you use, just as long as you are consistent. Here are some example style guides:\nGoogle’s R Style Guide\nTidyverse Style Guide\n\n\nOther useful general R resources\nHands-On Programming with R",
     "crumbs": [
       "Home",
-      "Helpful links"
+      "Helpful Links"
     ]
   }
 ]
