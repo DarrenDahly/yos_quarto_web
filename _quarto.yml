@@ -14,13 +14,17 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Data science with R and RStudio"
-      - 1_1_intro.qmd
-      - 1_2_first_steps.qmd
-      - 1_3_data_viz.qmd
-      - 1_99_learning_r_links.qmd
+      - section: "Data science with R and RStudior"
+      - r_rstudio/1_intro.qmd
+      - r_rstudio/2_first_steps.qmd
+      - r_rstudio/99_learning_r_links.qmd
+      - section: ""
+      - section: "Data visualisation"
+      - data_viz/1_viz_principles.qmd
+      - section: ""
+      - section: "Journal club"
+      - journal_club/1_explain_predict.qmd
 
-      
 format:
   html:
     theme:

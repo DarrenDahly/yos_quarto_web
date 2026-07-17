@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>notes – Your Own Statistician</title>
+<title>1. Principles of Data visualization – Your Own Statistician</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f670ab49fb9634e9dab58972b11477cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f670ab49fb9634e9dab58972b11477cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Your Own Statistician</span>
     </a>
   </div>
@@ -93,11 +93,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./team.html"> 
+    <a class="nav-link" href="../team.html"> 
 <span class="menu-text">Team</span></a>
   </li>  
 </ul>
@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../data_viz/1_viz_principles.html">1. Principles of Data visualization</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,19 +137,19 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./r_rstudio/1_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../r_rstudio/1_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1. Why R?</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./r_rstudio/2_first_steps.html" class="sidebar-item-text sidebar-link">
+  <a href="../r_rstudio/2_first_steps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2. First Steps</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./r_rstudio/99_learning_r_links.html" class="sidebar-item-text sidebar-link">
+  <a href="../r_rstudio/99_learning_r_links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Helpful Links</span></a>
   </div>
 </li>
@@ -159,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_viz/1_viz_principles.html" class="sidebar-item-text sidebar-link">
+  <a href="../data_viz/1_viz_principles.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">1. Principles of Data visualization</span></a>
   </div>
 </li>
@@ -169,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./journal_club/1_explain_predict.html" class="sidebar-item-text sidebar-link">
+  <a href="../journal_club/1_explain_predict.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1. Explain or Predict</span></a>
   </div>
 </li>
@@ -183,37 +183,113 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#deploying-to-the-web" id="toc-deploying-to-the-web" class="nav-link active" data-scroll-target="#deploying-to-the-web">Deploying to the web</a></li>
-  <li><a href="#github-set-up" id="toc-github-set-up" class="nav-link" data-scroll-target="#github-set-up">Github set up</a></li>
+  <li><a href="#related-resources" id="toc-related-resources" class="nav-link active" data-scroll-target="#related-resources">Related resources</a>
+  <ul class="collapse">
+  <li><a href="#books" id="toc-books" class="nav-link" data-scroll-target="#books">Books</a></li>
+  <li><a href="#papers" id="toc-papers" class="nav-link" data-scroll-target="#papers">Papers</a></li>
+  <li><a href="#coursestutorialsother" id="toc-coursestutorialsother" class="nav-link" data-scroll-target="#coursestutorialsother">Courses/tutorials/other</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">1. Principles of Data visualization</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="deploying-to-the-web" class="level1">
-<h1>Deploying to the web</h1>
-<p>I have set up a Netlify account and registered the your-own-statistician.com domain.</p>
-<p>The website is created by clicking render, which builds all the files in the _site folder.</p>
-<p>All the code is on github https://github.com/DarrenDahly/yos_quarto_web</p>
-<p>When the _site folder is updated, commit and push the changes to github.</p>
-<p>Netlify monitors the _site folder on github, and pushes it from there out to the web.</p>
-<p>Change code -&gt; Render site -&gt; Push to github</p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Data visualization plays at least two critical roles in medical and health research. The first, more prominent role is the visualization of research results to support their interpretation. The second, less glamorous role is in the exploration of research data in order to confirm its contents, completeness and quality. In my own work as a statistician, I spend a lot more time making plots, the vast majority of which are never seen by another human, than I do analyzing data with statistical models. This contrasts with what I believe is a common perception that visualizing data is some how tangential or secondary to data analysis. Nothing could be further from the truth and so we will spend a good bit of time on our data visualization skills.</p>
+<p>The specific tool we will use for data visualization is the R package <code>ggplot2</code>. However, before we dive into the specifics of code, I was to introduce what I think are the key principles of data visualization that you might think about before actually sitting down to create a particular figure or other visualization.</p>
+<hr>
+<ul>
+<li><p>Design with purpose</p>
+<ul>
+<li>Before you do anything else, decide what you want to convey and be able to explain why. Think about your audience. Once you have that down, only then figure out how to implement your ideas. And don’t let your current knowledge of visualization software dictate your designs. Find and learn the tools that help you create the visualization you want, rather than select visualizations that happen to be facilitated by the tools you already know how to use.</li>
+</ul></li>
+<li><p>Only include visual elements that support that purpose</p>
+<ul>
+<li>No “chart junk”</li>
+</ul></li>
+<li><p>Use perceptually accurate visual representations of information</p></li>
+<li><p>Any statistics/estimates should be presented with visual cues about their uncertainty</p></li>
+<li><p>Emphasize the key message(s) of the visualization to you audience by using:&nbsp;</p>
+<ul>
+<li><p>Annotations</p></li>
+<li><p>High contrast visualization</p></li>
+<li><p>Titles, subtitles, and captions</p></li>
+</ul></li>
+<li><p>Show the raw/underlying data where possible</p></li>
+<li><p>Make sure your visualizations are self-explanatory</p>
+<ul>
+<li><p>Legends/guides/axes labels</p></li>
+<li><p>Source(s) of data, with dates as relevant</p></li>
+<li><p>Methods used to produce statistics/estimates</p></li>
+<li><p>Abbreviations&nbsp;</p></li>
+<li><p>Units of measurement</p></li>
+<li><p>Scales</p></li>
+</ul></li>
+<li><p>Accessibility</p>
+<ul>
+<li><p>Color choices</p></li>
+<li><p>Alt text</p></li>
+</ul></li>
+<li><p>Corporate identity&nbsp;</p>
+<ul>
+<li><p>Titles</p></li>
+<li><p>Logos</p></li>
+<li><p>Colors</p></li>
+</ul></li>
+<li><p>Outputs</p>
+<ul>
+<li><p>File formats</p></li>
+<li><p>Resolutions</p></li>
+</ul></li>
+<li><p>Reproducibility</p>
+<ul>
+<li><p>Open code</p></li>
+<li><p>Links to data when possible</p></li>
+</ul></li>
+</ul>
+<section id="related-resources" class="level1">
+<h1>Related resources</h1>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<p><a href="https://nrennie.rbind.io/art-of-viz/">The Art of Data Visualization with ggplot2 by Nicola Rennie</a></p>
+<p><a href="https://kieranhealy.org/publications/dataviz/">Data Visualization: A Practical Introduction by Kieran Healy</a></p>
+<p><a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/">The Visual Display of Quantitative Information by Edward Tufte</a></p>
 </section>
-<section id="github-set-up" class="level1">
-<h1>Github set up</h1>
-<p>https://github.com/DarrenDahly/yos_quarto_web https://stackoverflow.com/questions/39435240/rstudio-changing-origin-for-git-version-control-of-project git remote add origin <a href="https://github.com/DarrenDahly/yos_quarto_web" class="uri">https://github.com/DarrenDahly/yos_quarto_web</a></p>
-<p>git branch - M main</p>
-<p>git push -u origin main</p>
-<p>https://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html https://psiweb.org/docs/default-source/sig—aims/a-guide-to-using-git-and-github-through-r-studio-201910.pdf?sfvrsn=c5a7db_0</p>
-<p>Netlify:</p>
-<p><a href="https://app.netlify.com/projects/delicate-yeot-fde6bf/deploys/6a216f55f56dfc04d0338e52" class="uri">https://app.netlify.com/projects/delicate-yeot-fde6bf/deploys/6a216f55f56dfc04d0338e52</a></p>
-<p>log in witi github darrendl1@gmail.com</p>
+<section id="papers" class="level2">
+<h2 class="anchored" data-anchor-id="papers">Papers</h2>
+<p><a href="https://royal-statistical-society.github.io/datavisguide/RSS-data-vis-guide.pdf">Best Practices for Data Visualisation Insights, advice, and examples (with code) to make data outputs more readable, accessible, and impactful. By Andreas Krause, Nicola Rennie, &amp; Brian Tarran</a></p>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6214189/">Error Bars Considered Harmful: Exploring Alternate Encodings for Mean and Error</a></p>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/26118403/">Presenting parasitological data: the good, the bad and the error bar</a></p>
+</section>
+<section id="coursestutorialsother" class="level2">
+<h2 class="anchored" data-anchor-id="coursestutorialsother">Courses/tutorials/other</h2>
+<p><a href="https://github.com/ikashnitsky/30daychart2026?tab=readme-ov-file">2026 30 day chart challenge, by Ilya Kashnitsky</a></p>
+<p><a href="https://nrennie.rbind.io/resources/">Collections of useful, freely-available resources and links on data-related topics, curated by Nicola Rennie</a></p>
+<p><a href="https://www.scientificdiscovery.dev/p/salonis-guide-to-data-visualization">Saloni’s guide to data visualization</a></p>
+<p><a href="http://motioninsocial.com/tufte/">Tufte in R</a></p>
+<p><a href="https://paldhous.github.io/NICAR/2016/infodesign.html">Which, chart should I use, and why? Information design for the human brain</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

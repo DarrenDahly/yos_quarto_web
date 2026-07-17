@@ -1,5 +1,5 @@
 ---
-title: "Why R?"
+title: "1. Why R?"
 ---
 
 R is a programming language designed to support the statistical analysis of data. It has several distinct advantages over commonly used statistical software, as well as some costs, all of which we will discuss.

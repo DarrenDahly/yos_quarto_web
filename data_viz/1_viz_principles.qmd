@@ -1,5 +1,5 @@
 ---
-title: "Principles of Data visualization"
+title: "1. Principles of Data visualization"
 ---
 
 Data visualization plays at least two critical roles in medical and health research. The first, more prominent role is the visualization of research results to support their interpretation. The second, less glamorous role is in the exploration of research data in order to confirm its contents, completeness and quality. In my own work as a statistician, I spend a lot more time making plots, the vast majority of which are never seen by another human, than I do analyzing data with statistical models. This contrasts with what I believe is a common perception that visualizing data is some how tangential or secondary to data analysis. Nothing could be further from the truth and so we will spend a good bit of time on our data visualization skills.
