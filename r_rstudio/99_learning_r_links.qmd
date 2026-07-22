@@ -26,4 +26,6 @@ As you develop R scripts, it helps to use a consistent **style** that will make 
 
 # Other useful general R resources
 
-[Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
+[Hands-On Programming with R](https://rstudio-education.github.io/hopr/) by Garrett Grolemund
+
+[Learning Statistics with R](https://learningstatisticswithr.com/) by Danielle Navarro

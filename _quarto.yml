@@ -14,7 +14,7 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Data science with R and RStudior"
+      - section: "Data science with R and RStudio"
       - r_rstudio/1_intro.qmd
       - r_rstudio/2_first_steps.qmd
       - r_rstudio/99_learning_r_links.qmd
